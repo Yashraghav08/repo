@@ -27,6 +27,9 @@ jobs:
           body: ${{ steps.autotagger.outputs.tagmessage }}
           draft: false
           prerelease: true
+      - name: Greet
+        run: decho "Hello user, I am triggered because of tag push in branch ${{ github.event.base_ref }} "
+        shell: bash
 
 
       - name: Rollback Release
