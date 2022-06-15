@@ -14,9 +14,6 @@ jobs:
         uses: butlerlogic/action-autotag@stable
         with:
           GITHUB_TOKEN: "${{ secrets.TOKEN }}"
-      - name: Greet
-        run: decho "Hello user, I am triggered because of tag push in branch ${{ github.event.base_ref }} "
-        shell: bash
       
       - name: Release
         id: create_release
