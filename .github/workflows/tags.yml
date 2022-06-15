@@ -1,0 +1,14 @@
+name: Publish in GitHub Package Registry
+
+on:  
+  push:
+    tags:
+      - '*'
+
+jobs:  
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Greet
+        run: echo "Hello user, I am triggered because of tag push in branch ${{ github.event.base_ref }} "
+        shell: bash
